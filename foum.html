@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>FOOD UM - Kelompok 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+    <link rel="shortcut icon" href="https://um.ac.id/wp-content/uploads/2020/08/cropped-Lambang-UM-32x32.png">
+</head>
+
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  h1 {
+    color: white; /* Ganti dengan warna yang diinginkan */
+    }
+
+        #clock {
+            color: white; /* Ganti dengan warna yang diinginkan */
+        }
+        #date {
+        color: white; /* Ganti dengan warna yang diinginkan */
+    }
+        .btn-outline-secondary {
+            color: white !important; /* Ganti dengan warna yang diinginkan */
+        }
+    #fasilitas h1 {
+    color: blue; /* Ganti dengan warna yang diinginkan */
+    }
+</style>
+
+
+<!-- Custom styles for this template -->
+<link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="blog.css" rel="stylesheet">
+</head>
+
+<body
+  style="background-image: url(bg_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; background-attachment:
+  fixed; height: 100%;">
+ 
+<div class="container">
+    <header class="blog-header lh-1 py-3">
+      <br>
+      <br>
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-3 pt-1">
+          <div id="clock" class="ms-0 mt-costum1 animate__animated animate__backInLeft animate__slow"></div>
+          <div id="date" class="ms-0 animate__animated animate__backInLeft animate__slow"></div>
+          <script>
+           function updateClock() {
+              var currentTime = new Date();
+              var currentHours = currentTime.getHours();
+              var currentMinutes = currentTime.getMinutes();
+              var currentSeconds = currentTime.getSeconds();
+              currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+              currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+              var timeOfDay = (currentHours < 12) ? "AM" : "PM";
+              currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
+              currentHours = (currentHours == 0) ? 12 : currentHours;
+              var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+              document.getElementById("clock").innerHTML = currentTimeString;
+
+              var days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+              var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober',
+                'November', 'Desember'
+              ];
+              var day = days[currentTime.getUTCDay()];
+              var date = currentTime.getUTCDate();
+              var month = months[currentTime.getUTCMonth()];
+              var year = currentTime.getUTCFullYear();
+              var dateString = day + ', ' + date + ' ' + month + ' ' + year;
+              document.getElementById("date").innerHTML = dateString;
+            }
+            setInterval(updateClock, 1000);
+          </script>
+        </div>
+        <div class="col-5 text-center">
+          <h1 style="font-family: 'Times New Roman', Times, serif;"><b>Welcome to Food UM</b></h1>
+        </div>
+        <div class="col-3 d-flex justify-content-end align-items-center">
+          <a class="link-light" href="#" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+              viewBox="0 0 24 24">
+              <title>Search</title>
+              <circle cx="10.5" cy="10.5" r="7.5" />
+              <path d="M21 21l-5.2-5.2" />
+            </svg>
+          </a>
+          <a class="btn btn-sm btn-outline-light" href="index.html">Logout</a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </header>
+
+    <div class="nav-scroller py-1 mb-2">
+      <nav class="nav d-sm-none d-md-block justify-content-between">
+        <a class="p-3 link-primary" href="#fip">FIP</a>
+        <a class="p-3 link-primary" href="#fs">FS</a>
+        <a class="p-3 link-primary" href="#fmipa">FMIPA</a>
+        <a class="p-3 link-primary" href="#feb">FEB</a>
+        <a class="p-3 link-primary" href="#ft">FT</a>
+        <a class="p-3 link-primary" href="#fis">FIS</a>
+        <a class="p-3 link-primary" href="#fpsi">FPsi</a>
+        <a class="p-3 link-primary" href="#fv">FV</a>
+        <a class="p-3 link-primary" href="#a19">GKB A19</a>
+        <a class="p-3 link-primary" href="#a20">GKB A20</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <div class="row mb-2">
+      <div class="col-md-6" id="fip">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-white">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">12 Stand Already</strong>
+            <h3 class="mb-0">Kantin FIP</h3>
+            <br>
+            <p class="card-text mb-auto">(kta-kata) ...</p>
+            <div class="btn-group">
+                <a class="btn btn-sm btn-outline-primary" href="stand-fip.html">More stand...</a>
+              </div>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="fip.jpg" width="200" height="250" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" id="fs">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-white">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">5 Stand Already</strong>
+            <h3 class="mb-0">Kantin FS</h3>
+            <br>
+            <p class="card-text mb-auto">(kta-kata) ...</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+              </div>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="fs.jpg" width="200" height="250" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="fasilitas" id="fasilitas" style=" background-color: rgb(250, 250, 250);">
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Other</h1>
+    <div class="album py-4 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col" id="fmipa">
+            <div class="card shadow-sm">
+              <img src="fmipa.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">9 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>FMIPA</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="feb">
+            <div class="card shadow-sm">
+              <img src="feb.jpeg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">10 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>FEB</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="ft">
+            <div class="card shadow-sm">
+              <img src="ft.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">1 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>FT</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="fis">
+            <br>
+            <div class="card shadow-sm">
+              <img src="fis.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">6 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>FIS</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-sm btn-outline-primary" href="stand-fis.html">More stand...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="fpsi">
+            <br>
+            <div class="card shadow-sm">
+              <img src="fpsiko.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">2 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>FPsi</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="fv">
+            <br>
+            <div class="card shadow-sm">
+              <img src="fv.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">6 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>FV</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="a19">
+            <br>
+            <div class="card shadow-sm">
+              <img src="gkb19.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">4 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>GKB A19</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" id="a20">
+            <br>
+            <div class="card shadow-sm">
+              <img src="gkba20.jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="d-inline-block mb-0 text-primary">4 Stand Already</p>
+                <h4 class="card-text">Kantin <strong>GKB A20</strong>
+                </h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <br>
+            <div class="card shadow-sm">
+              <img src=".jpg" alt="" class="img-fluid">
+              <div class="card-body">
+                <p class="card-text">Kantin ...</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">More stand...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br>
+  </div>
+  <footer class="bg-primary" id="contact" style="height: 13vh;">
+    <br>
+    <div class="container bg-primary">
+      <div class="py-0">
+        <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
+          <img class="ms-12" src="logo.png" alt="" width="100px">
+          <p class="text-light">&copy; 2023 - Kelompok 6</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-2"><a class="link-light" href="https://wa.me/+62881026959655"><i class="fa fa-whatsapp"></i></a></li>
+            <li class="ms-2"><a class="link-light" href="https://instagram.com/miftaa_id?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram"></i></a></li>
+            <li class="ms-2"><a class="link-light" href="https://twitter.com/miftaa_id?t=ThDjpA4KnkYX2x5tiXmE1Q&s=09"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

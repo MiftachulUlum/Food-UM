@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Masuk ke FOUM</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/resources/assets/css/main.css">
+    <link rel="stylesheet" href="/resources/assets/css/util.css">
+
+    <!-- StyleDenkLogin CSS -->
+    <link rel="stylesheet" href="/resources/stylelogin/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/resources/stylelogin/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/resources/stylelogin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/stylelogin/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://um.ac.id/wp-content/uploads/2020/08/cropped-Lambang-UM-32x32.png">
+</head>
+
+<body>
+    <div class="d-lg-flex half" style="background-color: #FFF;">
+        <div class="bg order-5 order-md-10 imagesFront">
+            
+            <img src="gambar.jpg" style="margin-left: 100px;">
+        </div>
+        <div class="contents order-2 order-md-1">
+            <br><br>
+            <div class="container">
+                <div class="row align-items-center justify-content-center" style="margin-left: 35px;">
+                    <div class="col-md-10">
+                        <div class="logoCivitas">
+                            <img src="Lambang-UM.png" style="margin-right: 3px;" width="75">
+                            <img src="Lambang-UM-1.png" width="75">
+                            <img src="dies-69.png" style="margin-right: 0px;" width="82">
+                            <img src="kampus-merdeka.png" width="82">
+                        </div>
+                        <br>
+                        <h3>
+                            Masuk Ke
+                            <strong>Food UM</strong>
+                        </h3>
+                        <p class="mb-4">Satu Akun untuk Semua Kemudahan Anda</p>
+                        <div>
+                            <div class="form-group first">
+                                <label for="username">Nama Akun:</label>
+                                <input type="text" name="username" placeholder="NIP/NIM/NITK/Email @um.ac.id anda" class="form-control" id="form-username" autofocus>
+                            </div>
+                            <div class="form-group last mb-3" id="show_hide_password">
+                                <label for="password">Sandi: </label>
+                                <input type="password" name="password" placeholder="kata sandi anda" class="form-control" id="form-password">
+                            </div>
+                            <div class="d-flex mb-5 align-items-center">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="showpasswd" name="showpasswd" value="1">
+                                    <label class="custom-control-label" for="showpasswd">Tampilkan Kata Sandi</label>
+                                </div>
+                                <span class="ml-auto">
+                                    <a href="https://profil.um.ac.id/reset/" class="forgot-pass caption">Lupa Kata Sandi</a>
+                                </span>
+                            </div>
+                            <a class="btn btn-block btn-primary" href="foum.html">Masuk</a>
+                        </div>
+                        <div class="teksFooter">
+                            <a class="teksFooter" href="https://bit.um.ac.id/umagazine vol1" target="_blank">UMagazine Vol I</a> . 
+                            <a class="teksFooter" href="http://www.um.ac.id" target="_blank">Website UM</a> . 
+                            <a class="teksFooter" href="https://support.um.ac.id" target="_blank">Pusat Bantuan</a> . © 2023 - Kelompok 6
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- StyleDenkLogin JS -->
+    <script src="/resources/stylelogin/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#showpasswd').change(function() {
+                if ($(this).is(':checked')) {
+                    $('#show_hide_password input').attr('type', 'text');
+                } else {
+                    $('#show_hide_password input').attr('type', 'password');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
